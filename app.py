@@ -242,7 +242,7 @@ if __name__ == '__main__':
         cleanup_background_processes()
         sys.exit(1)
 
-    # Flask Ap
+    # Flask App
     print("-----------------------------------")
     print("Starting Flask application...")
     print("!!! Background process cleanup on exit is best-effort on Windows !!!")
