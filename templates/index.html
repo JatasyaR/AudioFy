@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Audiobook Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-light">
+    <button id="theme-toggle" class="theme-toggle-btn" title="Toggle theme">
+        <i class="fas fa-sun"></i>
+    </button>
+    <div class="container">
+        <div class="app-container card">
+            <header class="app-header">
+                <h1><i class="fas fa-headphones-simple icon-gradient"></i> Audiofy PDF</h1>
+                <p>Convert PDF documents to high-quality audiobooks</p>
+            </header>
+            <main>
+                <section class="upload-section" id="upload-section">
+                    <div class="model-selection-section">
+                        <label for="model-select" class="form-label"><i class="fas fa-robot"></i> Choose Voice Model:</label>
+                        <select id="model-select" class="form-select">
+                            <option value="" disabled selected>Loading models...</option>
+                        </select>
+                         <p class="model-samples-link">
+                            <a href="https://rhasspy.github.io/piper-samples/" target="_blank" rel="noopener noreferrer" title="Listen to voice samples">
+                                <i class="fas fa-volume-high"></i> Listen to Voice Samples
+                            </a>
+                         </p>
+                    </div>
+                    <div class="upload-area" id="upload-area">
+                        <div class="upload-icon-wrapper">
+                           <i class="fas fa-cloud-arrow-up"></i>
+                        </div>
+                        <p class="upload-text">Drag & Drop PDF Here</p>
+                        <p class="upload-separator">or</p>
+                        <label for="pdf-file" class="btn btn-primary browse-btn">
+                            <i class="fas fa-file-arrow-up"></i> Browse Files
+                        </label>
+                        <input type="file" id="pdf-file" accept=".pdf" hidden>
+                    </div>
+                    <div id="error-message" class="error-message" style="display: none;"></div>
+                </section>
+                <section class="progress-section" id="progress-section" style="display: none;">
+                    <div class="progress-header">
+                        <p id="progress-status-text">Processing...</p>
+                         <i class="fas fa-spinner fa-spin progress-spinner"></i>
+                    </div>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                    <p class="progress-details" id="progress-details"></p>
+                    <p id="processing-note" class="processing-note"></p>
+                </section>
+                <section class="result-section card" id="result-section" style="display: none;">
+                    <h3 class="result-title"><i class="fas fa-circle-check"></i> Audiobook Ready</h3>
+                     <div class="conversion-details" id="conversion-details"></div>
+                    <audio controls id="audio-player" class="audio-element">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <div class="action-buttons">
+                        <a href="#" id="download-btn" class="btn btn-primary" download>
+                            <i class="fas fa-download"></i> Download MP3
+                        </a>
+                        <button id="new-conversion-btn" class="btn btn-secondary">
+                            <i class="fas fa-arrow-rotate-left"></i> Convert Another
+                        </button>
+                    </div>
+                </section>
+            </main>
+        </div>        
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
