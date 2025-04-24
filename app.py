@@ -11,8 +11,6 @@ from werkzeug.utils import secure_filename
 from celery.result import AsyncResult
 from tasks import celery_app , MODELS_BASE_DIR
 
-# MODELS_BASE_DIR = r"models"
-
 def list_available_models_flask():
     if not os.path.isdir(MODELS_BASE_DIR):
         print(f"[Flask App] Warning: Models directory not found at {MODELS_BASE_DIR}")
