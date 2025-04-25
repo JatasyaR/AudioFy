@@ -30,7 +30,7 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['AUDIO_FOLDER'] = os.path.join('static', 'audio')
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 os.makedirs(app.config['AUDIO_FOLDER'], exist_ok=True)
-REDIS_SERVER_PATH = r"Redis-x64-3.0.504\redis-server.exe"
+REDIS_SERVER_PATH = r"Redis-7.4.3\redis-server.exe"
 background_processes = []
 
 def cleanup_background_processes():

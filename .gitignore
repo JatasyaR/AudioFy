@@ -12,7 +12,7 @@ static/audio/
 
 logs/
 
-Redis-x64-3.0.504/
+Redis-7.4.3/
 piper/
 models/
 .vscode/

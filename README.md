@@ -31,7 +31,13 @@ These instructions are for running the project locally for development or testin
 
 *   **Python 3:** Make sure Python 3 (preferably 3.9+) is installed.
 *   **Git:** Needed to clone the repository.
-*   **Redis:** Install Redis server (pip install redis). *Note: The included code currently assumes a specific local Redis executable path for Windows (`Redis-x64-3.0.504`), you may need to adjust `REDIS_SERVER_PATH` in `app.py` or start Redis manually.*
+*   **Redis:** Install Redis server (pip install redis)
+Download Redis for Windows from here: https://github.com/redis-windows/redis-windows/releases
+
+Download Redis for Mac from here: https://gist.github.com/tomysmile/1b8a321e7c58499ef9f9441b2faa0aa8
+(if you're Mac user, change redis path code in app.py accordingly)
+
+. *Note: The included code currently assumes a specific local Redis executable path for Windows (`Redis-7.4.3`), you may need to adjust `REDIS_SERVER_PATH` in `app.py` or start Redis manually.*
 *   **FFmpeg:** Install FFmpeg. Download from [ffmpeg.org](https://ffmpeg.org/download.html) or use a package manager. Ensure the `ffmpeg` command is available in your system's PATH.
 *   **Piper TTS:**
     *   Download the appropriate Piper TTS executable for your operating system from the [Piper releases page](https://github.com/rhasspy/piper/releases).
