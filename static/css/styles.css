@@ -1,6 +1,3 @@
-/* styles.css */
-
-/* --- Base Variables (Light Theme Default) --- */
 :root {
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
@@ -11,22 +8,22 @@
     --border-color: #dee2e6;
     --accent-border-color: #ced4da;
 
-    --primary-color: #0d6efd; /* Bootstrap blue */
+    --primary-color: #0d6efd;
     --primary-color-darker: #0a58ca;
     --primary-color-lighter: #cfe2ff;
     --primary-text: #ffffff;
 
-    --secondary-color: #6c757d; /* Bootstrap gray */
+    --secondary-color: #6c757d; 
     --secondary-color-darker: #5a6268;
     --secondary-color-lighter: #e9ecef;
     --secondary-text: #ffffff;
 
-    --success-color: #198754; /* Bootstrap green */
+    --success-color: #198754; 
     --success-bg-light: #d1e7dd;
-    --error-color: #dc3545; /* Bootstrap red */
+    --error-color: #dc3545; 
     --error-bg-light: #f8d7da;
-    --warning-color: #ffc107; /* Bootstrap yellow */
-    --info-color: #0dcaf0; /* Bootstrap cyan */
+    --warning-color: #ffc107; 
+    --info-color: #0dcaf0; 
 
     --shadow-sm: 0 .125rem .25rem rgba(0, 0, 0, .075);
     --shadow-md: 0 .5rem 1rem rgba(0, 0, 0, .15);
@@ -40,18 +37,18 @@
     --input-focus-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
 }
 
-/* --- Dark Theme Variables --- */
+
 body.dark-mode {
-    --bg-color: #1a1a1a; /* Darker background */
-    --card-bg: #2c2c2e; /* Slightly lighter card */
-    --text-color: #f8f9fa; /* Light text */
-    --text-muted: #adb5bd; /* Muted light text */
-    --border-color: #495057; /* Darker border */
+    --bg-color: #1a1a1a; 
+    --card-bg: #2c2c2e; 
+    --text-color: #f8f9fa; 
+    --text-muted: #adb5bd; 
+    --border-color: #495057; 
     --accent-border-color: #343a40;
 
-    --primary-color: #2979ff; /* Slightly brighter blue */
+    --primary-color: #2979ff; 
     --primary-color-darker: #0d6efd;
-    --primary-color-lighter: rgba(41, 121, 255, 0.2); /* Darker lighter blue */
+    --primary-color-lighter: rgba(41, 121, 255, 0.2); 
     --primary-text: #ffffff;
 
     --secondary-color: #6c757d;
@@ -59,14 +56,14 @@ body.dark-mode {
     --secondary-color-lighter: #343a40;
     --secondary-text: #ffffff;
 
-    --success-color: #20c997; /* Tealish green */
+    --success-color: #20c997; 
     --success-bg-light: rgba(32, 201, 151, 0.15);
-    --error-color: #f16272; /* Lighter red */
+    --error-color: #f16272; 
     --error-bg-light: rgba(241, 98, 114, 0.1);
-    --warning-color: #ffca2c; /* Lighter yellow */
-    --info-color: #2cf2ff; /* Lighter cyan */
+    --warning-color: #ffca2c; 
+    --info-color: #2cf2ff; 
 
-    --shadow-sm: 0 .125rem .25rem rgba(255, 255, 255, .05); /* Inverted shadow */
+    --shadow-sm: 0 .125rem .25rem rgba(255, 255, 255, .05); 
     --shadow-md: 0 .5rem 1rem rgba(255, 255, 255, .08);
 
     --input-bg: #343a40;
@@ -75,7 +72,7 @@ body.dark-mode {
     --input-focus-shadow: 0 0 0 .25rem rgba(41, 121, 255, .25);
 }
 
-/* --- Base & Typography --- */
+
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
@@ -88,14 +85,13 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* --- Container & Layout --- */
 .container {
     display: flex;
-    flex-direction: column; /* Added for theme toggle positioning */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 2rem 1rem; /* Responsive padding */
+    padding: 2rem 1rem; 
 }
 
 .app-container.card {
@@ -103,27 +99,27 @@ body {
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-md);
     width: 100%;
-    max-width: 650px; /* Slightly narrower */
-    padding: 2rem 2.5rem; /* Adjusted padding */
+    max-width: 650px; 
+    padding: 2rem 2.5rem; 
     transition: background-color 0.3s ease;
-    margin-top: 40px; /* Space for theme toggle */
+    margin-top: 40px; 
 }
 
 .app-header {
     text-align: center;
-    margin-bottom: 2.5rem; /* Increased spacing */
+    margin-bottom: 2.5rem; 
 }
 
 .app-header h1 {
-    font-size: 1.8rem; /* Slightly smaller h1 */
+    font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--text-color); /* Use text color for better contrast */
+    color: var(--text-color); 
 }
 
 .app-header h1 i {
     margin-right: 0.6rem;
-    vertical-align: middle; /* Align icon nicely */
+    vertical-align: middle; 
 }
 
 .app-header p {
@@ -131,7 +127,7 @@ body {
     font-size: 1rem;
 }
 
-.icon-gradient { /* Apply to icons for subtle effect */
+.icon-gradient { 
     background: linear-gradient(45deg, var(--primary-color), var(--info-color));
     -webkit-background-clip: text;
     background-clip: text;
@@ -139,9 +135,9 @@ body {
 }
 
 
-/* --- Theme Toggle Button --- */
+
 .theme-toggle-btn {
-    position: fixed; /* Keep it fixed */
+    position: fixed; 
     top: 15px;
     right: 20px;
     background-color: var(--card-bg);
@@ -173,7 +169,7 @@ body {
 .light-mode .theme-toggle-btn i.fa-sun { transform: rotate(0deg) scale(1); }
 
 
-/* --- Upload Section --- */
+
 .upload-section { margin-bottom: 2rem; }
 
 .upload-area {
@@ -183,7 +179,7 @@ body {
     text-align: center;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    background-color: transparent; /* Remove light mode subtle bg */
+    background-color: transparent; 
 }
 
 .upload-area:hover {
@@ -191,14 +187,14 @@ body {
     background-color: var(--primary-color-lighter);
 }
 
-.upload-area.highlight { /* Added via JS */
+.upload-area.highlight { 
     border-color: var(--primary-color);
     background-color: var(--primary-color-lighter);
     border-style: solid;
 }
 
 .upload-icon-wrapper {
-    font-size: 3.5rem; /* Bigger icon */
+    font-size: 3.5rem; 
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
@@ -230,11 +226,11 @@ body {
     padding: 0.75rem 1rem;
     border-radius: var(--border-radius-sm);
     font-weight: 500;
-    display: none; /* Controlled by JS */
+    display: none; 
 }
 
 
-/* --- Progress Section --- */
+
 .progress-section { margin: 2.5rem 0; text-align: center; }
 
 .progress-header {
@@ -251,26 +247,26 @@ body {
 
 
 .progress-bar-wrapper {
-    height: 8px; /* Thinner bar */
-    background-color: var(--secondary-color-lighter); /* Use theme color */
+    height: 8px; 
+    background-color: var(--secondary-color-lighter); 
     border-radius: 4px;
     overflow: hidden;
-    margin-bottom: 0.75rem; /* Space below bar */
+    margin-bottom: 0.75rem; 
 }
 
 .progress-bar {
     height: 100%;
-    background: linear-gradient(90deg, var(--primary-color) 0%, var(--info-color) 100%); /* Gradient bar */
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--info-color) 100%); 
     width: 0%;
-    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smoother transition */
+    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
     border-radius: 4px;
 }
 
-.progress-details { /* Status from Celery meta */
+.progress-details { 
      font-size: 0.9rem;
      color: var(--text-muted);
      margin-top: 0.5rem;
-     min-height: 1.2em; /* Prevent layout jump */
+     min-height: 1.2em; 
      text-align: center;
  }
 
@@ -283,11 +279,11 @@ body {
 }
 
 
-/* --- Result Section --- */
+
 .result-section.card {
     padding: 1.5rem 2rem;
     border-radius: var(--border-radius-md);
-    background-color: var(--secondary-color-lighter); /* Slight bg contrast */
+    background-color: var(--secondary-color-lighter);
     margin-top: 1.5rem;
     text-align: center;
     border: 1px solid var(--border-color);
@@ -305,7 +301,7 @@ body {
     margin-bottom: 1.5rem;
     font-size: 0.9rem;
     color: var(--text-muted);
-    background-color: var(--card-bg); /* Match card background */
+    background-color: var(--card-bg); 
     padding: 0.8rem 1rem;
     border-radius: var(--border-radius-sm);
     text-align: left;
@@ -317,7 +313,7 @@ body {
      align-items: center;
  }
 .conversion-details p i {
-     width: 20px; /* Align icons */
+     width: 20px; 
      margin-right: 0.6rem;
      color: var(--primary-color);
      text-align: center;
@@ -331,42 +327,42 @@ body {
     border-radius: 5px;
     box-shadow: var(--shadow-sm);
 }
-/* Custom audio player colors (basic) */
+
 body.dark-mode audio {
     filter: invert(1) hue-rotate(180deg);
 }
 
 .action-buttons {
     display: flex;
-    flex-direction: column; /* Stack buttons */
-    align-items: center; /* Center stack */
-    gap: 0.8rem; /* Spacing */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 0.8rem; 
     margin-top: 1.5rem;
 }
 
-/* --- Buttons --- */
+
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.6rem;
-    padding: 0.75rem 1.5rem; /* Slightly smaller padding */
+    padding: 0.75rem 1.5rem; 
     border-radius: var(--border-radius-md);
-    border: 1px solid transparent; /* Base border */
+    border: 1px solid transparent; 
     font-weight: 500;
-    font-size: 0.95rem; /* Consistent font size */
+    font-size: 0.95rem; 
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
-    width: 100%; /* Full width in stacked layout */
-    max-width: 300px; /* Max width for sanity */
+    width: 100%; 
+    max-width: 300px; 
 }
 .btn:hover { transform: translateY(-2px); }
 .btn:active { transform: translateY(0); }
 
-.btn i { font-size: 0.9em; /* Icon size relative to text */ }
+.btn i { font-size: 0.9em;  }
 
-/* Primary Button (Browse, Download) */
+
 .btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -379,7 +375,7 @@ body.dark-mode audio {
     box-shadow: var(--shadow-md);
 }
 
-/* Secondary Button (New Conversion) */
+
 .btn-secondary {
     background-color: var(--card-bg);
     color: var(--primary-color);
@@ -391,36 +387,36 @@ body.dark-mode audio {
 }
 
 
-/* --- Responsive Adjustments --- */
+
 @media (min-width: 576px) {
     .action-buttons {
-        flex-direction: row; /* Side-by-side on larger screens */
+        flex-direction: row; 
         justify-content: center;
     }
     .btn {
-        width: auto; /* Auto width when side-by-side */
-        min-width: 180px; /* Minimum width */
+        width: auto; 
+        min-width: 180px; 
     }
 }
 
 @media (max-width: 768px) {
      body { padding: 1rem 0.5rem; }
-    .app-container.card { padding: 1.5rem; margin-top: 60px; } /* Adjust for toggle */
+    .app-container.card { padding: 1.5rem; margin-top: 60px; } 
     .app-header h1 { font-size: 1.6rem; }
     .app-header p { font-size: 0.95rem; }
     .theme-toggle-btn { top: 10px; right: 10px; }
     .upload-area { padding: 2rem 1rem; }
 }
 
-/* --- Styles for Model Selection --- */
+
 .model-selection-section {
-    margin-bottom: 2rem; /* Space before upload area */
+    margin-bottom: 2rem; 
     padding: 1rem 0;
-    border-bottom: 1px solid var(--border-color); /* Separator line */
+    border-bottom: 1px solid var(--border-color); 
 }
 
 .form-label {
-    display: block; /* Full width */
+    display: block; 
     font-weight: 500;
     margin-bottom: 0.5rem;
     color: var(--text-color);
@@ -432,7 +428,7 @@ body.dark-mode audio {
 
 .form-select {
     width: 100%;
-    padding: 0.6rem 0.75rem; /* Adjust padding */
+    padding: 0.6rem 0.75rem; 
     font-size: 0.95rem;
     line-height: 1.5;
     color: var(--text-color);
@@ -441,13 +437,13 @@ body.dark-mode audio {
     border: 1px solid var(--input-border);
     border-radius: var(--border-radius-sm);
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    appearance: none; /* Remove default system styling */
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e"); /* Basic arrow */
+    appearance: none; 
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-position: right .75rem center;
     background-size: 16px 12px;
 }
-/* Dark mode select arrow */
+
 body.dark-mode .form-select {
      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23dee2e6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
  }
@@ -466,7 +462,7 @@ body.dark-mode .form-select {
 
 .model-samples-link {
     margin-top: 0.8rem;
-    text-align: right; /* Position link to the right */
+    text-align: right; 
     font-size: 0.85rem;
 }
 .model-samples-link a {
@@ -482,7 +478,7 @@ body.dark-mode .form-select {
     margin-right: 0.3rem;
 }
 
-/* Adjustments for result details */
-.result-section .conversion-details p i.fa-robot { /* Icon for model used */
-    color: var(--info-color); /* Use a different color if desired */
+
+.result-section .conversion-details p i.fa-robot { 
+    color: var(--info-color); 
 }
